@@ -3,12 +3,12 @@ import React from "react";
 import { FaProjectDiagram, FaUsers, FaCogs, FaAward } from "react-icons/fa";
 
 const statsData = [
-  { id: 1, number: "123", text: "Projects Completed", top: "40px", left: "40px", icon: <FaProjectDiagram /> },
-  { id: 2, number: "84", text: "Happy Clients", top: "0px", left: "260px", icon: <FaUsers /> },
+  { id: 1, number: "500+", text: "IT Products & Solutions Delivered", top: "40px", left: "40px", icon: <FaProjectDiagram /> },
+  { id: 2, number: "100%", text: "End-to-End IT Lifecycle Support", top: "0px", left: "260px", icon: <FaUsers /> },
 
   // ✅ FIXED POSITIONS
-  { id: 3, number: "37", text: "Implementation", top: "200px", left: "260px", icon: <FaCogs /> },
-  { id: 4, number: "30", text: "Years Experience", top: "320px", left: "60px", icon: <FaAward /> },
+  { id: 3, number: " 4+", text: "Core Service Verticals Covered", top: "200px", left: "260px", icon: <FaCogs /> },
+  { id: 4, number: "10+", text: "Technology Domains Expertise", top: "320px", left: "60px", icon: <FaAward /> },
 ];
 
 export default function Stats() {

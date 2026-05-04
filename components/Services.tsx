@@ -8,6 +8,8 @@ export default function WhyChooseUs() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "center",
     loop: false,
+    // Optional: add skipSnaps for smoother scrolling on mobile
+    skipSnaps: false,
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -26,20 +28,22 @@ export default function WhyChooseUs() {
   const cards = [
     { img: "/IT Hardware.webp", title: "IT Hardware", dark: false },
     { img: "/IT SERVICES 1.webp", title: "IT Services", dark: true },
-    { img: "/PERIPHERALS 1.webp", title: "Peripherals", dark: false },
-    { img: "/SOFTWARE SOLUTIONS.webp", title: "Software Solutions", dark: true },
+    { img: "/PERIPHERALS 1.webp", title: "IT Peripherals", dark: false },
+    { img: "/SOFTWARE SOLUTIONS.webp", title: "Forensic Workstation/ Servers", dark: true },
   ];
 
   return (
-    <div className="w-full px-4">
+    <div className="w-full px-4 py-10">
       
-      {/* Carousel */}
+      {/* Carousel Container */}
       <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex">
+        {/* Solution 1: Added gap between slides (gap-4) and a slight margin start (ml-2) for mobile air */}
+        <div className="flex gap-4 ml-2 md:ml-0">
           {cards.map((card, index) => (
             <div
               key={index}
-              className="flex-[0_0_80%] md:flex-[0_0_25%] flex justify-center"
+              // Solution 1: Added px-2 to ensure cards don't touch when scrolling
+              className="flex-[0_0_80%] md:flex-[0_0_25%] flex justify-center px-2"
             >
               <div className="w-[252px] h-[500px] flex flex-col overflow-hidden rounded-xl shadow-lg border border-gray-200 transition-transform duration-300">
                 
@@ -73,15 +77,16 @@ export default function WhyChooseUs() {
         </div>
       </div>
 
-      {/* Dots */}
-      <div className="flex justify-center mt-6 gap-2">
+      {/* Solution 2: Added md:hidden to hide dots on laptop size screens */}
+      <div className="flex justify-center mt-8 gap-2 md:hidden">
         {cards.map((_, index) => (
           <button
             key={index}
             onClick={() => emblaApi && emblaApi.scrollTo(index)}
-            className={`w-3 h-3 rounded-full transition ${
-              index === selectedIndex ? "bg-blue-600" : "bg-gray-400"
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === selectedIndex ? "bg-blue-600 w-6" : "bg-gray-400"
             }`}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>

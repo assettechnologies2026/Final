@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -27,4 +28,41 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* The container that holds the logos */
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  mask-image: linear-gradient(
+    to right,
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 10%,
+    hsl(0 0% 0% / 1) 90%,
+    hsl(0 0% 0% / 0)
+  );
+}
+
+/* The moving strip */
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  gap: 60px; /* Space between logos */
+  animation: scroll 80s linear infinite;
+}
+
+/* The actual rotation logic */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Optional: Pause on hover */
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
 }

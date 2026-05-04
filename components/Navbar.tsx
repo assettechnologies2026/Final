@@ -7,7 +7,11 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-black text-white fixed top-0 z-50">
+    /* 
+       Changed bg-black to bg-slate-50 (off-white) and dark:bg-black.
+       Changed text-white to text-black and dark:text-white.
+    */
+    <nav className="w-full bg-slate-50 text-black dark:bg-black dark:text-white fixed top-0 z-50 transition-colors duration-300">
       
       {/* Top Bar */}
       <div className="flex items-center justify-between px-8 py-4">
@@ -37,7 +41,8 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden px-8 pb-6 bg-black">
+        /* Added bg-slate-50 and dark:bg-black here to match the nav background */
+        <div className="md:hidden px-8 pb-6 bg-slate-50 dark:bg-black">
           <div className="flex flex-col gap-4 text-lg">
             <a href="#home" onClick={() => setOpen(false)}>Home</a>
             <a href="#services" onClick={() => setOpen(false)}>Services</a>

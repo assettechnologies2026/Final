@@ -8,6 +8,8 @@ import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Cta from "@/components/CTA"
+import Partners from "@/components/Partners";
+import Logos from "@/components/Logos";
 
 export default function Home() {
   return (
@@ -23,19 +25,11 @@ export default function Home() {
         <About />
       </section>
       <Stats />
-      <section id="projects" className="pt-20">
-        <Testimonials/>
-      </section>
-
-      
-
-      
-    
-      
       
       <Cta/>
       <Clients />
-      <Testimonials/>
+      <Partners/>
+      <Logos/>
       <section id="contact" className="pt-20">
         <Contact />
       </section>

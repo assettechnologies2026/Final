@@ -1,36 +1,78 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    reason: "Reason for Contacting*",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // The WhatsApp number (including country code, e.g., 91 for India)
+    const phoneNumber = "919876543210";
+
+    // Formatting the message with bold headers and spacing
+    const message = `*New Contact Form Submission*%0A%0A` +
+      `*👤 Name:* ${formData.name}%0A` +
+      `*📧 Email:* ${formData.email}%0A` +
+      `*❓ Reason:* ${formData.reason}%0A` +
+      `*📞 Phone:* ${formData.phone || "Not provided"}%0A%0A` +
+      `*💬 Message:*%0A${formData.message}`;
+
+    const whatsappUrl = `https://wa.me/${919284232669}?text=${message}`;
+
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <section className="bg-gray-50 py-20 px-4">
       <div className="max-w-3xl mx-auto text-center">
-        {/* Header Text */}
         <h2 className="text-[#1d2129] text-4xl md:text-5xl font-bold mb-4">
           What can we do for you?
         </h2>
         <p className="text-gray-600 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
-          We are ready to work on a project of any complexity, 
+          We are ready to work on a project of any complexity,
           whether it's commercial or residential.
         </p>
 
-        {/* Form Container */}
-        <form className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Name Input */}
             <input
               type="text"
+              name="name"
               placeholder="Your Name*"
+              value={formData.name}
+              onChange={handleChange}
               className="w-full p-4 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400"
               required
             />
-            {/* Email Input */}
             <input
               type="email"
+              name="email"
               placeholder="Email*"
+              value={formData.email}
+              onChange={handleChange}
               className="w-full p-4 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400"
               required
             />
-            {/* Select Input */}
             <div className="relative">
-              <select className="w-full p-4 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-400 appearance-none">
+              <select
+                name="reason"
+                value={formData.reason}
+                onChange={handleChange}
+                className={`w-full p-4 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white appearance-none ${formData.reason === "Reason for Contacting*" ? "text-gray-400" : "text-black"
+                  }`}
+              >
                 <option>Reason for Contacting*</option>
                 <option>Commercial Project</option>
                 <option>Residential Project</option>
@@ -42,27 +84,29 @@ export default function Contact() {
                 </svg>
               </div>
             </div>
-            {/* Phone Input */}
             <input
               type="tel"
+              name="phone"
               placeholder="Phone"
-              className="w-full p-4 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400"
+              value={formData.phone}
+              onChange={handleChange}
+              className="w-full p-4 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400 text-black"
             />
           </div>
 
-          {/* Message Textarea */}
           <textarea
+            name="message"
             placeholder="Message"
             rows={6}
+            value={formData.message}
+            onChange={handleChange}
             className="w-full p-4 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400 resize-none"
           ></textarea>
 
-          {/* Required Note */}
           <p className="text-left text-gray-500 text-sm">
             <span className="text-red-500 font-bold">*</span> indicates a required field
           </p>
 
-          {/* Submit Button */}
           <div className="flex justify-center mt-6">
             <button
               type="submit"

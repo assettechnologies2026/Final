@@ -5,7 +5,7 @@ export default function AssetTechnologiesSection() {
     // Default background (white) for the whole section
     <main className="min-h-screen bg-white text-gray-900 font-sans p-6 md:p-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        
+
         {/* Division 1: Image/Logo */}
         <div className="flex justify-center items-center p-8 bg-gray-50 rounded-2xl h-full min-h-[400px]">
           {/* Custom SVG Logo Implementation */}
@@ -24,25 +24,21 @@ export default function AssetTechnologiesSection() {
           <span className="text-sm font-semibold text-blue-600 uppercase tracking-widest">
             Company Overview
           </span>
-          
+
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tighter">
             About us
           </h2>
-          
+
           <p className="text-lg text-gray-700 leading-relaxed font-normal">
-            Asset Technologies is a leading IT solutions provider delivering 
-            innovative and customized technology solutions to businesses. 
+            Asset Technologies is a leading IT solutions provider delivering
+            innovative and customized technology solutions to businesses.
             We focus on improving productivity, efficiency, and growth.
           </p>
-          
-          {/* Example Call-to-Action Style */}
-          <div className="pt-4">
-            <button className="bg-[#1a3db6] text-white px-8 py-3 rounded-full font-medium text-lg hover:bg-blue-700 transition duration-150 shadow-md">
-              Learn More
-            </button>
-          </div>
+
+
+
         </div>
-        
+
       </div>
     </main>
   );

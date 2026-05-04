@@ -51,10 +51,6 @@ export default function Footer() {
             </div>
 
             <div className={iconStyle}>
-              <FaTwitter />
-            </div>
-
-            <div className={iconStyle}>
               <a
                 href="https://wa.me/919284232669?text=Hi%20I%20want%20to%20book%20a%20consultation"
                 target="_blank"
