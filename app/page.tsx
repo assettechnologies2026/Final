@@ -1,6 +1,5 @@
 import Stats from "@/components/Stats";
 import Clients from "@/components/Clients";
-import Testimonials from "@/components/Testimonials"
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
