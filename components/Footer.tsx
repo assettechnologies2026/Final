@@ -28,11 +28,11 @@ export default function Footer() {
           </p>
           <p>
             <span className="text-blue-700 font-semibold">PHONE:</span>{" "}
-            <span className="text-gray-900">+84 1102 2703</span>
+            <span className="text-gray-900">+91 99871 20290</span>
           </p>
           <p>
             <span className="text-blue-700 font-semibold">EMAIL:</span>{" "}
-            <span className="text-gray-900">info@assettechnologies.co.in</span>
+            <span className="text-gray-900">sales@assettechnologies.co.in</span>
           </p>
         </div>
 

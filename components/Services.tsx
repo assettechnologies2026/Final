@@ -28,8 +28,8 @@ export default function WhyChooseUs() {
   const cards = [
     { img: "/IT Hardware.webp", title: "IT Hardware", dark: false },
     { img: "/IT SERVICES 1.webp", title: "IT Services", dark: true },
-    { img: "/PERIPHERALS 1.webp", title: "IT Peripherals", dark: false },
-    { img: "/SOFTWARE SOLUTIONS.webp", title: "Forensic Workstation/ Servers", dark: true },
+    { img: "/IT PERIPHERALS.webp", title: "IT Peripherals", dark: false },
+    { img: "/Forensic Workstation.webp", title: "Forensic Workstation/ Servers", dark: true },
   ];
 
   return (

@@ -5,7 +5,7 @@ export default function CTA() {
     <section
       className="relative w-full h-[200px] flex items-center"
       style={{
-        backgroundImage: "url('/banner.webp')",
+        backgroundImage: "url('/Banner.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

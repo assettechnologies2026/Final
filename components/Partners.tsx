@@ -6,11 +6,11 @@ import { ChevronLeft, ChevronRight, Award } from 'lucide-react';
 
 const certificates = [
   { id: 2, src: 'Certificates/ASSET TECHNOLOGIES QMS FINAL 560.webp', title: 'ISO 9001:2015 Quality Management' },
-  { id: 3, src: 'Certificates/ASSEt TECHNOLOGIES_certificate.webp', title: 'Dell Loyalty Partner 2026' },
+  { id: 3, src: 'Certificates/ASSET TECHNOLOGIES_certificate.webp', title: 'Dell Loyalty Partner 2026' },
   { id: 1, src: 'Certificates/Asset -Mumbai.webp', title: 'AOC Authorized Partner 2024' },
   { id: 4, src: 'Certificates/Dynamic_Authorization_Letter.webp', title: 'Dynamic Retail Partner' },
   { id: 5, src: 'Certificates/Jabra_Asset Technologies_Authorised Certificate.webp', title: 'Jabra Authorized Partner 2025-26' },
-  { id: 6, src: 'Certificates/LENovo CERTIFICATION.webp', title: 'Lenovo Evolve Partner 2025' },
+  { id: 6, src: 'Certificates/LENOVO CERTIFICATION.webp', title: 'Lenovo Evolve Partner 2025' },
 ];
 
 export default function Partners() {
