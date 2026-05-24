@@ -22,19 +22,18 @@ export default function Footer() {
 
         {/* Left Info */}
         <div className="space-y-4 text-sm">
-        <p className="leading-7">
-  <span className="text-blue-700 font-semibold">ADDRESS:</span>{" "}
-  
-  <span className="text-gray-900">
+          <div className="flex flex-col sm:flex-row leading-7 text-gray-900">
+  {/* Label */}
+  <span className="text-blue-700 font-semibold min-w-max mr-2">
+    ADDRESS:
+  </span>
+
+  {/* Address Content */}
+  <p>
     Al Madina Building, P Nagare Ln, Pannalal Terrace, Grant Road East,
-  </span>
-
-  <br />
-
-  <span className="ml-[88px] text-gray-900">
-  Bharat Nagar, Grant Road, Mumbai, Maharashtra 400007
-  </span>
-</p>
+    Bharat Nagar, Grant Road, Mumbai, Maharashtra 400007
+  </p>
+</div>
           <p>
             <span className="text-blue-700 font-semibold">PHONE:</span>{" "}
             <span className="text-gray-900">+91 99871 20290</span>
@@ -51,12 +50,15 @@ export default function Footer() {
 
           <div className="flex items-center justify-center gap-6 flex-wrap">
 
+            
             <div className={iconStyle}>
-              <FaFacebookF />
-            </div>
-
-            <div className={iconStyle}>
-              <FaLinkedinIn />
+              <a
+  href="https://www.facebook.com/people/Asset-Technologies/61560926654624"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <FaFacebookF />
+</a>
             </div>
 
             <div className={iconStyle}>

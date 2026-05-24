@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Asset Technologies",
+  title: "Asset Technologies | IT/Hardware/Laptop/Desktop/Server Dealer",
   description: "A compelling description for SEO.",
 };
 <html lang="en" className="scroll-smooth"></html>

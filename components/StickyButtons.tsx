@@ -14,15 +14,7 @@ export default function FloatingButtons() {
       >
         <FaWhatsapp className="text-white text-3xl" />
       </a>
-      {/* Free Consultation Button */}
-      <a
-        href="/contact"
-        className="bg-[#001f3f] text-white px-5 py-3 rounded-full shadow-lg font-semibold hover:bg-blue-900 hover:scale-105 transition duration-300"
-      >
-        Get Free Consultation
-      </a>
-
-      
+            
     </div>
   );
 }

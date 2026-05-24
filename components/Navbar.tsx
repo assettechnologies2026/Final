@@ -17,9 +17,11 @@ export default function Navbar() {
       <div className="flex items-center justify-between px-8 py-4">
         
         {/* Logo */}
-        <a href="#home" className="flex items-center">
-          <img src="/Logo.webp" alt="logo" className="h-10" />
-        </a>
+        <a href="#home" className="flex flex-col items-start leading-tight">
+  <img src="/LogoW.png" alt="logo" className="h-12" />
+
+  
+</a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 text-lg">

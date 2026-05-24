@@ -9,7 +9,7 @@ export default function Logos() {
     <section style={{ padding: '60px 0', backgroundColor: 'var(--bg-color)' }}>
       <div style={{ textAlign: 'center', marginBottom: '40px' }}>
         <h2 style={{ fontSize: '24px', fontWeight: 'bold', textTransform: 'uppercase' }}>
-          Our Partners & Brands
+          Brands Associated With
         </h2>
       </div>
 

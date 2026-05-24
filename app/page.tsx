@@ -26,8 +26,8 @@ export default function Home() {
       </section>
       <Stats />
       
-      <Cta/>
       <Clients />
+      <Cta/>
       <Partners/>
       <Logos/>
       <section id="contact" className="pt-20">

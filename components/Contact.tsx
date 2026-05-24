@@ -11,23 +11,52 @@ export default function Contact() {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement |
+      HTMLSelectElement |
+      HTMLTextAreaElement
+    >
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const message =
-      `*New Contact Form Submission*%0A%0A` +
-      `*👤 Name:* ${formData.name}%0A` +
-      `*📧 Email:* ${formData.email}%0A` +
-      `*❓ Reason:* ${formData.reason}%0A` +
-      `*📞 Phone:* ${formData.phone || "Not provided"}%0A%0A` +
-      `*💬 Message:*%0A${formData.message}`;
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    const whatsappUrl = `https://wa.me/919284232669?text=${message}`;
-    window.open(whatsappUrl, "_blank");
+      const data = await res.json();
+
+      if (data.success) {
+        alert("Form Submitted Successfully");
+
+        setFormData({
+          name: "",
+          email: "",
+          reason: "Reason for Contacting*",
+          phone: "",
+          message: "",
+        });
+
+      } else {
+        alert("Failed to submit form");
+      }
+
+    } catch (error) {
+      console.log(error);
+      alert("Something went wrong");
+    }
   };
 
   return (
@@ -85,8 +114,16 @@ export default function Contact() {
               </select>
 
               <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-blue-600 dark:text-blue-400">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
                 </svg>
               </div>
             </div>
