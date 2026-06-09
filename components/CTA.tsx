@@ -25,10 +25,10 @@ export default function CTA() {
           <p className="text-sm md:text-xl">
             Just one call away:{" "}
             <a
-              href="tel:+8411022703"
+              href="tel:+91 99871 20290"
               className="underline hover:text-blue-400"
             >
-              +84 1102 2703
+              +91 99871 20290
             </a>
           </p>
         </div>

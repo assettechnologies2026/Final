@@ -3,10 +3,10 @@
 import React from "react";
 
 export default function Logos() {
-  const logoIds = Array.from({ length: 43 }, (_, i) => i + 1);
+  const logoIds = Array.from({ length: 36}, (_, i) => i + 1);
 
   return (
-    <section style={{ padding: '60px 0', backgroundColor: 'var(--bg-color)' }}>
+    <section style={{ padding: '30px 0', backgroundColor: 'var(--bg-color)' }}>
       <div style={{ textAlign: 'center', marginBottom: '40px' }}>
         <h2 style={{ fontSize: '24px', fontWeight: 'bold', textTransform: 'uppercase' }}>
           Brands Associated With
@@ -21,7 +21,7 @@ export default function Logos() {
               key={`logo-1-${id}`}
               src={`/Logos/${id}.webp`}
               alt={`Logo ${id}`}
-              style={{ height: '60px', width: 'auto', objectFit: 'contain' }}
+              style={{ height: '80px', width: 'auto', objectFit: 'contain' }}
             />
           ))}
         </div>
@@ -33,7 +33,7 @@ export default function Logos() {
               key={`logo-2-${id}`}
               src={`/Logos/${id}.webp`}
               alt={`Logo ${id}`}
-              style={{ height: '60px', width: 'auto', objectFit: 'contain' }}
+              style={{ height: '80px', width: 'auto', objectFit: 'contain' }}
             />
           ))}
         </div>

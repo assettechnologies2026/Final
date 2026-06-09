@@ -3,7 +3,7 @@
 import React from "react";
 
 export default function Logos() {
-  const logoIds = Array.from({ length: 7 }, (_, i) => i + 1);
+  const logoIds = Array.from({ length: 20 }, (_, i) => i + 1);
 
   return (
     <section
@@ -20,7 +20,7 @@ export default function Logos() {
             textTransform: "uppercase",
           }}
         >
-          Client
+          Client & Partners
         
         </h2>
       </div>
@@ -34,7 +34,7 @@ export default function Logos() {
               src={`/Logos/Clients/${id}.webp`}
               alt={`Logo ${id}`}
               style={{
-                height: "60px",
+                height: "80px",
                 width: "auto",
                 objectFit: "contain",
               }}

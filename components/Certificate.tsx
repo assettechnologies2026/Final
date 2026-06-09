@@ -13,7 +13,7 @@ const certificates = [
   { id: 6, src: 'Certificates/LENOVO CERTIFICATION.webp', title: 'Lenovo Evolve Partner 2025' },
 ];
 
-export default function Partners() {
+export default function Certificate() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {

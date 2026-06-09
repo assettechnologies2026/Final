@@ -7,9 +7,10 @@ import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Cta from "@/components/CTA"
-import Partners from "@/components/Partners";
+import Partners from "@/components/Certificate";
 import Logos from "@/components/Logos";
 import FloatingButtons from "@/components/StickyButtons"
+import Certificate from "@/components/Certificate";
 
 export default function Home() {
   return (
@@ -28,7 +29,10 @@ export default function Home() {
       
       <Clients />
       <Cta/>
-      <Partners/>
+      <section id="certificate" className="pt-20">
+
+      <Certificate/>
+      </section>
       <Logos/>
       <section id="contact" className="pt-20">
         <Contact />
