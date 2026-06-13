@@ -29,7 +29,7 @@ export default function Hero() {
           
           <button className="w-full md:w-auto border border-white px-6 py-2 cursor-pointer hover:text-green-400 hover:border-green-400 transition-colors">
             <a
-              href="https://wa.me/919284232669?text=Hi%20I%20want%20to%20book%20a%20consultation"
+              href="https://wa.me/919987120290?text=Hi%20I%20want%20to%20book%20a%20consultation"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full"
