@@ -92,7 +92,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://wa.me/919284232669?text=Hi%20I%20want%20to%20book%20a%20consultation"
+            href="https://wa.me/919987120290?text=Hi%20I%20want%20to%20book%20a%20consultation"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-white px-8 py-3 rounded-md font-medium hover:border-green-400 hover:text-green-400 text-white transition-all duration-300 text-center whitespace-nowrap"
