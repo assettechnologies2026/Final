@@ -7,9 +7,7 @@ export default function GoogleReviews() {
       className="bg-white py-12"
     >
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-8">
-          Google Reviews
-        </h2>
+      
 
         <div className="w-full overflow-hidden rounded-xl shadow-lg">
           <iframe

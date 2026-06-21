@@ -6,8 +6,8 @@ import { FaProjectDiagram, FaUsers, FaCogs, FaAward } from "react-icons/fa";
 const statsData = [
   {
     id: 1,
-    number: "500+",
-    text: "IT Products & Solutions Delivered",
+    number: "100+",
+    text: "Projects Successfully Completed",
     top: "40px",
     left: "40px",
     icon: <FaProjectDiagram />,
@@ -31,7 +31,7 @@ const statsData = [
   {
     id: 4,
     number: "10+",
-    text: "Technology Domains Expertise",
+    text: "Years of Industry Experience",
     top: "320px",
     left: "60px",
     icon: <FaAward />,

@@ -8,13 +8,13 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-slate-50 text-black dark:bg-black dark:text-white fixed top-0 z-50 transition-colors duration-300">
-      
+
       {/* Top Bar */}
       <div className="flex items-center justify-between px-8 py-4">
-        
+
         {/* Logo */}
         <a href="#home" className="flex flex-col items-start leading-tight">
-          
+
           {/* Light Theme Logo */}
           <img
             src="/LogoB.png"
