@@ -11,6 +11,7 @@ import Partners from "@/components/Certificate";
 import Logos from "@/components/Logos";
 import FloatingButtons from "@/components/StickyButtons"
 import Certificate from "@/components/Certificate";
+import GoogleReviews from "@/components/Googlereviews";
 
 export default function Home() {
   return (
@@ -26,20 +27,22 @@ export default function Home() {
         <About />
       </section>
       <Stats />
-      
       <Clients />
       <Cta/>
       <section id="certificate" className="pt-20">
-
       <Certificate/>
       </section>
       <Logos/>
       <section id="contact" className="pt-20">
         <Contact />
       </section>
+      <section>
+
+      <GoogleReviews/>
+      </section>
+      
       <Footer/>
       <FloatingButtons/>
-      
     </>
   );
 }

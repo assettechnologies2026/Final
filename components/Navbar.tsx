@@ -19,14 +19,14 @@ export default function Navbar() {
           <img
             src="/LogoB.png"
             alt="logo"
-            className="h-14 block dark:hidden"
+            className="h-15 block dark:hidden"
           />
 
           {/* Dark Theme Logo */}
           <img
             src="/LogoW.png"
             alt="logo"
-            className="h-14 hidden dark:block"
+            className="h-15 hidden dark:block"
           />
 
         </a>
@@ -63,4 +63,4 @@ export default function Navbar() {
       )}
     </nav>
   );
-}
+} 
