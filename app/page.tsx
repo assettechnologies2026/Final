@@ -12,6 +12,8 @@ import Logos from "@/components/Logos";
 import FloatingButtons from "@/components/StickyButtons"
 import Certificate from "@/components/Certificate";
 import GoogleReviews from "@/components/Googlereviews";
+import { Analytics } from "@vercel/analytics/next"
+
 
 export default function Home() {
   return (
@@ -38,11 +40,12 @@ export default function Home() {
       </section>
       <section>
 
-      <GoogleReviews/>
+      <div className="blootrue-widget-aOqde-H3HykJ" />
       </section>
       
       <Footer/>
       <FloatingButtons/>
+      <Analytics />
     </>
   );
 }

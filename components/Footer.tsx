@@ -63,7 +63,7 @@ export default function Footer() {
 
             <div className={iconStyle}>
               <a
-                href="https://wa.me/919284232669?text=Hi%20I%20want%20to%20book%20a%20consultation"
+                href="https://wa.me/919987120290?text=Hi%20I%20want%20to%20book%20a%20consultation"
                 target="_blank"
                 rel="noopener noreferrer"
               ><FaWhatsapp /></a>
