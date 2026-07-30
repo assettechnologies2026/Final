@@ -46,7 +46,7 @@ export default function WhyChooseUs() {
     },
     {
       img: "/Forensic Workstation.webp",
-      title: "Forensic Workstation/ Servers",
+      title: "Forensic Workstation & Enterprise Servers",
       desc: "High-performance systems for digital forensics, data recovery, investigation analysis, and secure data processing.",
       dark: true,
     },
