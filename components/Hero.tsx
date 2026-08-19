@@ -5,13 +5,13 @@ import { useEffect, useState } from "react";
 // Simplified slides array without title/description
 const slides = [
   {
-    image: "/Banner1.png",
+    image: "/Banner1.webp",
   },
   {
-    image: "/Banner2.png",
+    image: "/Banner2.webp",
   },
   {
-    image: "/Banner3.png",
+    image: "/Banner3.webp",
   },
 ];
 
