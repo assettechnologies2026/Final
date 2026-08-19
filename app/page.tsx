@@ -30,21 +30,20 @@ export default function Home() {
       </section>
       <Stats />
       <Clients />
-      <Cta/>
+      <Cta />
       <section id="certificate" className="pt-20">
-      <Certificate/>
+        <Certificate />
       </section>
-      <Logos/>
+      <Logos />
+      <section>
+        <div className="blootrue-widget-aOqde-H3HykJ" />
+      </section>
       <section id="contact" className="pt-20">
         <Contact />
       </section>
-      <section>
 
-      <div className="blootrue-widget-aOqde-H3HykJ" />
-      </section>
-      
-      <Footer/>
-      <FloatingButtons/>
+      <Footer />
+      <FloatingButtons />
       <Analytics />
     </>
   );

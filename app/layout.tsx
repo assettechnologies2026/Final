@@ -10,7 +10,25 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Asset Technologies | IT/Hardware/Laptop/Desktop/Server Dealer",
-  description: "A compelling description for SEO.",
+  description: "Asset Technologies provides B2B IT infrastructure, computer hardware, enterprise software, networking, data center, cybersecurity and industrial automation solutions in India..",
+  keywords: [
+    'B2B IT solutions',
+    'industrial automation',
+    'IT infrastructure',
+    'data center solutions',
+    'networking services',
+    'CCTV solutions',
+    'B2B hardware dealer',
+    'Best Workstation Dealer',
+    'Forensic Workstation Dealer',
+    'Server Dealer',
+    'Laptop Dealer',
+    'Desktop Dealer',
+    'IT hardware supplier',
+    'Cybersecurity solutions',
+    'IT consulting services',
+    'B2B technology provider',
+  ],
 };
 <html lang="en" className="scroll-smooth"></html>
 

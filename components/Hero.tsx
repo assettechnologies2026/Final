@@ -2,18 +2,16 @@
 
 import { useEffect, useState } from "react";
 
+// Simplified slides array without title/description
 const slides = [
   {
-    image: "/Banner1.webp",
-    title: "Cutting Edge IT Solutions That Power Your Business Growth",
-    description:
-      "From hardware infrastructure to CCTV security, forensic workstations, and enterprise servers.",
+    image: "/Banner1.png",
   },
   {
-    image: "/Banner2.webp",
+    image: "/Banner2.png",
   },
   {
-    image: "/Banner3.webp",
+    image: "/Banner3.png",
   },
 ];
 
@@ -48,24 +46,15 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+      {/* Dark Overlay - Removed border-none and used standard Tailwind classes */}
+      <div className="absolute inset-0 bg-black/30" />
 
-      {/* Hero Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6">
-        <div className="max-w-4xl text-center text-white">
-          {slides[current].title && (
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              {slides[current].title}
-            </h1>
-          )}
-
-          {slides[current].description && (
-            <p className="mt-6 text-base md:text-lg text-gray-200">
-              {slides[current].description}
-            </p>
-          )}
-        </div>
+      {/* Hero Content - z-10 for raising above overlay */}
+      <div className="relative z-10 h-full w-full flex flex-col items-center justify-center px-6">
+        
+        {/*
+          Removed the text content container, including <h1> and <p>
+        */}
 
         {/* Navigation Dots */}
         <div className="absolute bottom-40 flex justify-center gap-3">
