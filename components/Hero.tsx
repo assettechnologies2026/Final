@@ -211,7 +211,7 @@ export default function Hero() {
 
         {/* WhatsApp */}
         <a
-          href="https://wa.me/919284232669?text=Hi%20I%20want%20to%20book%20a%20consultation"
+          href="https://wa.me/919920824844?text=Hi%20I%20want%20to%20book%20a%20consultation"
           target="_blank"
           rel="noopener noreferrer"
           className="
