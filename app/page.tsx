@@ -6,8 +6,6 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import Cta from "@/components/CTA"
-import Partners from "@/components/Certificate";
 import Logos from "@/components/Logos";
 import FloatingButtons from "@/components/StickyButtons"
 import Certificate from "@/components/Certificate";
@@ -30,7 +28,6 @@ export default function Home() {
       </section>
       <Stats />
       <Clients />
-      <Cta />
       <section id="certificate" className="pt-20">
         <Certificate />
       </section>

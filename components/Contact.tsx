@@ -59,110 +59,180 @@ export default function Contact() {
     }
   };
 
-  return (
-    <section className="bg-gray-100 dark:bg-gray-900 py-20 px-4 transition-colors duration-300">
-      <div className="max-w-3xl mx-auto text-center">
+ return (
+  <section
+    className="
+      relative overflow-hidden
+      py-20 px-4
+      bg-gray-100 dark:bg-gray-900
+      bg-[url('/contact-light.png')]
+      dark:bg-[url('/contact-dark.png')]
+      bg-cover bg-center bg-no-repeat
+      transition-colors duration-300
+    "
+  >
+    {/* Background overlay */}
+    <div
+      className="
+        absolute inset-0
+        bg-white/75
+        dark:bg-gray-950/65
+        transition-colors duration-300
+      "
+    />
 
-        <h2 className="text-gray-900 dark:text-white text-4xl md:text-5xl font-bold mb-4">
-          What can we do for you?
-        </h2>
+    {/* Content */}
+    <div className="relative z-10 max-w-3xl mx-auto text-center">
 
-        <p className="text-gray-600 dark:text-gray-300 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
-          We are ready to work on a project of any complexity,
-          whether it's commercial or residential.
-        </p>
+      <h2 className="text-gray-900 dark:text-white text-4xl md:text-5xl font-bold mb-4">
+        What can we do for you?
+      </h2>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+      <p className="text-gray-600 dark:text-gray-300 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
+        We are ready to work on a project of any complexity,
+        whether it's commercial or residential.
+      </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <form onSubmit={handleSubmit} className="space-y-4">
 
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name*"
-              value={formData.name}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name*"
+            value={formData.name}
+            onChange={handleChange}
+            className="
+              w-full p-4 rounded-md
+              border border-gray-200 dark:border-gray-700
+              bg-white/90 dark:bg-gray-800/90
+              text-gray-900 dark:text-white
+              placeholder-gray-400
+              focus:outline-none focus:ring-2 focus:ring-blue-500
+              transition
+            "
+            required
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email*"
+            value={formData.email}
+            onChange={handleChange}
+            className="
+              w-full p-4 rounded-md
+              border border-gray-200 dark:border-gray-700
+              bg-white/90 dark:bg-gray-800/90
+              text-gray-900 dark:text-white
+              placeholder-gray-400
+              focus:outline-none focus:ring-2 focus:ring-blue-500
+              transition
+            "
+            required
+          />
+
+          <div className="relative">
+            <select
+              name="reason"
+              value={formData.reason}
               onChange={handleChange}
-              className="w-full p-4 rounded-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-              required
-            />
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Email*"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full p-4 rounded-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-              required
-            />
-
-            <div className="relative">
-              <select
-                name="reason"
-                value={formData.reason}
-                onChange={handleChange}
-                className={`w-full p-4 rounded-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none transition ${
+              className={`
+                w-full p-4 rounded-md
+                border border-gray-200 dark:border-gray-700
+                bg-white/90 dark:bg-gray-800/90
+                focus:outline-none focus:ring-2 focus:ring-blue-500
+                appearance-none transition
+                ${
                   formData.reason === "Reason for Contacting*"
                     ? "text-gray-400"
                     : "text-gray-900 dark:text-white"
-                }`}
-              >
-                <option>Reason for Contacting*</option>
-                <option>Commercial Project</option>
-                <option>Residential Project</option>
-                <option>Other</option>
-              </select>
-
-              <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-blue-600 dark:text-blue-400">
-                <svg
-                  className="w-5 h-5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-            </div>
-
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone"
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full p-4 rounded-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-            />
-
-          </div>
-
-          <textarea
-            name="message"
-            placeholder="Message"
-            rows={6}
-            value={formData.message}
-            onChange={handleChange}
-            className="w-full p-4 rounded-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none transition"
-          ></textarea>
-
-          <p className="text-left text-gray-500 dark:text-gray-400 text-sm">
-            <span className="text-red-500 font-bold">*</span> indicates a required field
-          </p>
-
-          <div className="flex justify-center mt-6">
-            <button
-              type="submit"
-              className="bg-[#2b44b1] hover:bg-[#1e328f] text-white font-bold py-4 px-16 rounded-md transition-all duration-300 transform active:scale-95 shadow-lg"
+                }
+              `}
             >
-              Submit
-            </button>
+              <option>Reason for Contacting*</option>
+              <option>Commercial Project</option>
+              <option>Residential Project</option>
+              <option>Other</option>
+            </select>
+
+            <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-blue-600 dark:text-blue-400">
+              <svg
+                className="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
           </div>
 
-        </form>
-      </div>
-    </section>
-  );
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone"
+            value={formData.phone}
+            onChange={handleChange}
+            className="
+              w-full p-4 rounded-md
+              border border-gray-200 dark:border-gray-700
+              bg-white/90 dark:bg-gray-800/90
+              text-gray-900 dark:text-white
+              placeholder-gray-400
+              focus:outline-none focus:ring-2 focus:ring-blue-500
+              transition
+            "
+          />
+
+        </div>
+
+        <textarea
+          name="message"
+          placeholder="Message"
+          rows={6}
+          value={formData.message}
+          onChange={handleChange}
+          className="
+            w-full p-4 rounded-md
+            border border-gray-200 dark:border-gray-700
+            bg-white/90 dark:bg-gray-800/90
+            text-gray-900 dark:text-white
+            placeholder-gray-400
+            focus:outline-none focus:ring-2 focus:ring-blue-500
+            resize-none transition
+          "
+        />
+
+        <p className="text-left text-gray-600 dark:text-gray-400 text-sm">
+          <span className="text-red-500 font-bold">*</span>{" "}
+          indicates a required field
+        </p>
+
+        <div className="flex justify-center mt-6">
+          <button
+            type="submit"
+            className="
+              bg-[#2b44b1]
+              hover:bg-[#1e328f]
+              text-white font-bold
+              py-4 px-16
+              rounded-md
+              transition-all duration-300
+              transform active:scale-95
+              shadow-lg
+            "
+          >
+            Submit
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </section>
+);
 }
