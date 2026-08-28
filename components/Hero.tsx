@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 
 const slides = [
   {
+    image: "/Banner0.png",
+  },
+  {
     image: "/Banner1.webp",
   },
   {
@@ -29,7 +32,6 @@ export default function Hero() {
     <section id="home" className="relative w-full">
 
       {/* ================= BANNER ================= */}
-      {/* Subtracting header height (e.g. 80px) so the bottom never overflows the screen */}
       <div className="relative w-full sm:h-[calc(100vh-80px)] overflow-hidden">
         {slides.map((slide, index) => (
           <img
@@ -55,7 +57,6 @@ export default function Hero() {
         ))}
 
         {/* ================= PC BUTTONS ================= */}
-        {/* Adjusted bottom positions slightly higher to account for taskbars/browser UI */}
         <div
           className="
             hidden
