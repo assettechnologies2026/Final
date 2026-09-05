@@ -3,9 +3,7 @@
 import { useEffect, useState } from "react";
 
 const slides = [
-  {
-    image: "/Banner0.png",
-  },
+  
   {
     image: "/Banner1.webp",
   },
