@@ -3,7 +3,7 @@
 import React from "react";
 
 export default function Logos() {
-  const logoIds = Array.from({ length: 20 }, (_, i) => i + 1);
+  const logoIds = Array.from({ length: 21 }, (_, i) => i + 1);
 
   const cardStyle: React.CSSProperties = {
     backgroundColor: "#f5f5f5",
