@@ -1,39 +1,46 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
-
-
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Asset Technologies | IT/Hardware/Laptop/Desktop/Server Dealer",
-  description: "Asset Technologies provides B2B IT infrastructure, computer hardware, enterprise software, networking, data center, cybersecurity and industrial automation solutions in India..",
+  metadataBase: new URL("https://assettech.in"),
+
+  title: "Asset Technologies | B2B IT Hardware & PC Solutions",
+
+  description:
+    "Asset Technologies provides B2B IT infrastructure, computer hardware, custom PC builds, workstations, servers, networking, cybersecurity and industrial automation solutions in India.",
+
   keywords: [
-    'B2B IT solutions',
-    'industrial automation',
-    'IT infrastructure',
-    'data center solutions',
-    'networking services',
-    'CCTV solutions',
-    'B2B hardware dealer',
-    'Best Workstation Dealer',
-    'Forensic Workstation Dealer',
-    'Server Dealer',
-    'Laptop Dealer',
-    'Desktop Dealer',
-    'IT hardware supplier',
-    'Cybersecurity solutions',
-    'IT consulting services',
-    'B2B technology provider',
-    'PC build',
-    'Computer parts',
-    'PC Components',
-    'Custom PC Builder',
-    'Bulk PC Components Supplier'
+    "B2B IT solutions",
+    "IT infrastructure",
+    "IT hardware supplier",
+    "B2B hardware dealer",
+    "computer hardware supplier",
+    "PC components supplier",
+    "custom PC builder",
+    "PC builder",
+    "PC components",
+    "computer parts",
+    "workstation dealer",
+    "forensic workstation dealer",
+    "server dealer",
+    "laptop dealer",
+    "desktop dealer",
+    "bulk PC components supplier",
+    "data center solutions",
+    "networking solutions",
+    "cybersecurity solutions",
+    "industrial automation",
   ],
+
+  alternates: {
+    canonical: "https://assettech.in",
+  },
+
   robots: {
     index: true,
     follow: true,
@@ -48,13 +55,30 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-};
-<html lang="en" className="scroll-smooth"></html>
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+  openGraph: {
+    title: "Asset Technologies | B2B IT Hardware & PC Solutions",
+    description:
+      "B2B IT hardware, custom PC builds, workstations, servers, networking, cybersecurity and industrial automation solutions in India.",
+    url: "https://assettech.in",
+    siteName: "Asset Technologies",
+    locale: "en_IN",
+    type: "website",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}
+      <body className={inter.className}>
+        {children}
+
+        <Analytics />
+
         <Script
           src="https://api.blootrue.com/api/widgets/platform.js"
           strategy="afterInteractive"
