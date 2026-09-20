@@ -28,18 +28,24 @@ export const metadata: Metadata = {
     'Cybersecurity solutions',
     'IT consulting services',
     'B2B technology provider',
+    'PC build',
+    'Computer parts',
+    'PC Components',
+    'Custom PC Builder',
+    'Bulk PC Components Supplier'
   ],
   robots: {
-    index: false,
+    index: true,
     follow: true,
-    nocache: true,
+    nocache: false,
+
     googleBot: {
       index: true,
-      follow: false,
-      noimageindex: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
