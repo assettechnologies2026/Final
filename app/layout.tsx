@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://assettech.in"),
 
-  title: "Asset Technologies | IT Infrastructure & Technology Solutions ",
+  title: "Asset Technologies | IT Infrastructure & Technology Solutions",
 
   description:
     "Asset Technologies provides B2B IT infrastructure, computer hardware, custom PC builds, workstations, servers, networking, cybersecurity and industrial automation solutions in India.",
