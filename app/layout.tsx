@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Asset Technologies | B2B IT Hardware & PC Solutions",
+    title: "Asset Technologies | IT Infrastructure & Technology Solutions",
     description:
       "B2B IT hardware, custom PC builds, workstations, servers, networking, cybersecurity and industrial automation solutions in India.",
     url: "https://assettech.in",
