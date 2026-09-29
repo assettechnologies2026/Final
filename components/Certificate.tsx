@@ -11,6 +11,7 @@ const certificates = [
   { id: 4, src: 'Certificates/Dynamic_Authorization_Letter.webp', title: 'Dynamic Retail Partner' },
   { id: 5, src: 'Certificates/Jabra_Asset Technologies_Authorised Certificate.webp', title: 'Jabra Authorized Partner 2025-26' },
   { id: 6, src: 'Certificates/LENOVO CERTIFICATION.webp', title: 'Lenovo Evolve Partner 2025' },
+  { id: 7, src: 'Certificates/TT CERTIFICATION.webp', title: 'Thermaltake Certificate 2026-27' },
 ];
 
 export default function Certificate() {
